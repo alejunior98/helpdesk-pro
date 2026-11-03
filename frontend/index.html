@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpDesk Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>HelpDesk Pro</h1>
+        <p>Sistema de gerenciamento de chamados</p>
+    </header>
+
+    <main>
+        <section class="formulario">
+            <h2>Abrir novo chamado</h2>
+
+            <form id="formChamado">
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" required>
+
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" required></textarea>
+
+                <label for="solicitante">Solicitante</label>
+                <input type="text" id="solicitante" required>
+
+                <label for="prioridade">Prioridade</label>
+                <select id="prioridade">
+                    <option value="Baixa">Baixa</option>
+                    <option value="Normal" selected>Normal</option>
+                    <option value="Alta">Alta</option>
+                    <option value="Urgente">Urgente</option>
+                </select>
+
+                <button type="submit">Cadastrar chamado</button>
+            </form>
+
+            <p id="mensagem"></p>
+        </section>
+
+        <section class="lista">
+            <h2>Chamados cadastrados</h2>
+            <button onclick="listarChamados()">Atualizar lista</button>
+            <div id="chamados"></div>
+        </section>
+    </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
